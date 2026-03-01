@@ -13,34 +13,119 @@
         h2 { color: #9c27b0; border-bottom: 3px solid #e91e63; padding-bottom: 15px; margin-top: 40px; }
         h3 { color: #333; margin-top: 25px; }
         .trend-box { background: linear-gradient(135deg, #f8f9fa 0%, #e8f5e9 100%); border-left: 5px solid #4caf50; padding: 20px; margin: 20px 0; border-radius: 8px; }
-        .product-section { border: 2px solid #e91e63; border-radius: 12px; padding: 20px; margin: 25px 0; background: #fafafa; }
-        .product-name { font-size: 20px; font-weight: bold; color: #e91e63; margin-bottom: 15px; }
-        .specs { background: #fff; padding: 15px; border-radius: 8px; margin: 10px 0; }
-        .specs-row { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid #eee; }
-        .specs-label { font-weight: bold; color: #666; }
-        .specs-value { color: #333; }
-        .color-tag { display: inline-block; background: #e91e63; color: white; padding: 4px 12px; border-radius: 15px; font-size: 12px; margin: 2px; }
+        
+        /* 产品详细卡片样式 */
+        .product-card { 
+            border: 2px solid #e91e63; 
+            border-radius: 15px; 
+            padding: 25px; 
+            margin: 30px 0; 
+            background: #fafafa;
+            page-break-inside: avoid;
+        }
+        .product-header { 
+            display: flex; 
+            align-items: center; 
+            margin-bottom: 20px;
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 15px;
+        }
+        .product-number { 
+            background: #e91e63; 
+            color: white; 
+            width: 50px; 
+            height: 50px; 
+            border-radius: 50%; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            font-size: 24px; 
+            font-weight: bold;
+            margin-right: 20px;
+            flex-shrink: 0;
+        }
+        .product-name { 
+            font-size: 22px; 
+            font-weight: bold; 
+            color: #e91e63; 
+        }
+        
+        .product-content { display: flex; gap: 25px; }
+        .product-info { flex: 1; }
+        .product-image { 
+            width: 280px; 
+            flex-shrink: 0;
+        }
+        .product-image img { 
+            width: 100%; 
+            border-radius: 10px; 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+        }
+        
+        .specs-table { 
+            width: 100%; 
+            border-collapse: collapse; 
+            margin: 15px 0;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .specs-table th, .specs-table td { 
+            padding: 12px 15px; 
+            text-align: left; 
+            border-bottom: 1px solid #eee;
+        }
+        .specs-table th { 
+            background: #9c27b0; 
+            color: white; 
+            font-weight: 500;
+        }
+        .specs-table tr:hover { background: #f9f9f9; }
+        
+        .color-tag { 
+            display: inline-block; 
+            background: #e91e63; 
+            color: white; 
+            padding: 4px 12px; 
+            border-radius: 15px; 
+            font-size: 12px; 
+            margin: 2px;
+        }
+        
+        .design-section { 
+            background: #333; 
+            color: white; 
+            padding: 20px; 
+            border-radius: 10px; 
+            margin: 15px 0;
+            font-family: monospace;
+            font-size: 14px;
+        }
+        .design-section-title { 
+            color: #e91e63; 
+            font-weight: bold; 
+            margin-bottom: 10px;
+            font-family: Arial, sans-serif;
+        }
+        
         .factory-box { background: #e3f2fd; border-left: 5px solid #2196f3; padding: 20px; margin: 20px 0; border-radius: 8px; }
         .factory-name { font-size: 18px; font-weight: bold; color: #1565c0; margin-bottom: 10px; }
-        .contact-method { background: #fff; padding: 15px; border-radius: 8px; margin: 10px 0; }
         .search-params { background: #263238; color: #4fc3f7; padding: 15px; border-radius: 8px; margin: 10px 0; font-family: monospace; font-size: 14px; }
+        
         .price-table { width: 100%; border-collapse: collapse; margin: 25px 0; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
         .price-table th, .price-table td { border: 1px solid #ddd; padding: 12px; text-align: center; font-size: 14px; }
         .price-table th { background: linear-gradient(135deg, #e91e63, #9c27b0); color: white; }
         .price-table tr:nth-child(even) { background: #f9f9f9; }
-        .price-table tr:hover { background: #fce4ec; }
+        
         .tip { background: #fff8e1; border-left: 5px solid #ffc107; padding: 15px; margin: 20px 0; border-radius: 8px; }
-        .sketch { background: #333; color: white; padding: 20px; border-radius: 8px; margin: 15px 0; font-family: monospace; font-size: 14px; }
-        .sketch-title { color: #e91e63; font-weight: bold; margin-bottom: 10px; }
-        .image-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; margin: 20px 0; }
-        .image-grid img { width: 100%; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
-        .image-item { text-align: center; }
-        .image-item p { margin: 8px 0; font-size: 14px; color: #666; }
+        
+        .summary-box { background: linear-gradient(135deg, #fff3e0 0%, #fce4ec 100%); border: 2px solid #e91e63; padding: 25px; border-radius: 12px; margin: 30px 0; }
+        
         .toc { background: #f5f5f5; padding: 20px; border-radius: 10px; margin: 20px 0; }
         .toc ul { columns: 2; -webkit-columns: 2; -moz-columns: 2; }
         .toc li { margin: 8px 0; }
-        .summary-box { background: linear-gradient(135deg, #fff3e0 0%, #fce4ec 100%); border: 2px solid #e91e63; padding: 25px; border-radius: 12px; margin: 30px 0; }
-        .summary-box h3 { color: #e91e63; margin-top: 0; }
+        
+        .note { color: #999; font-size: 12px; text-align: center; margin-top: 10px; }
     </style>
 </head>
 <body>
@@ -55,12 +140,11 @@
             <h3 style="margin-top:0">📋 报告目录</h3>
             <ul>
                 <li>一、欧美市场流行趋势分析</li>
-                <li>二、10款爆品详细设计方案</li>
-                <li>三、AI生成模特展示图</li>
-                <li>四、中国Sourcing工厂推荐</li>
-                <li>五、成本与批发价格体系</li>
-                <li>六、定价策略与利润分析</li>
-                <li>七、操作建议与下一步</li>
+                <li>二、10款爆品详细设计方案（含AI模特图）</li>
+                <li>三、中国Sourcing工厂推荐</li>
+                <li>四、成本与批发价格体系</li>
+                <li>五、定价策略与利润分析</li>
+                <li>六、操作建议与下一步</li>
             </ul>
         </div>
 
@@ -93,151 +177,367 @@
         <h2>二、10款爆品详细设计规格</h2>
 
         <!-- 产品1 -->
-        <div class="product-section">
-            <div class="product-name">💎 产品1：燕麦色羊绒宽松毛衣</div>
-            <div class="sketch">
-                <div class="sketch-title">📐 设计规格</div>
-                款式：落肩Oversized宽松版型 | 领型：自然圆领微微堆堆领<br>
-                袖型：落肩长袖，袖口微喇 | 工艺：12针粗针平针编织<br>
-                尺寸：衣长65cm 胸围120cm 袖长55cm
+        <div class="product-card">
+            <div class="product-header">
+                <div class="product-number">1</div>
+                <div class="product-name">燕麦色羊绒宽松毛衣（爆款首选）</div>
             </div>
-            <div class="specs">
-                <div class="specs-row"><span class="specs-label">面料</span><span class="specs-value">30%山羊绒 + 70%美利奴羊毛</span></div>
-                <div class="specs-row"><span class="specs-label">颜色</span><span class="specs-value"><span class="color-tag">燕麦色</span><span class="color-tag">奶油白</span><span class="color-tag">炭灰色</span><span class="color-tag">浅驼色</span></span></div>
-                <div class="specs-row"><span class="specs-label">克重</span><span class="specs-value">380g</span></div>
+            <div class="product-content">
+                <div class="product-info">
+                    <div class="design-section">
+                        <div class="design-section-title">📐 设计规格明细</div>
+                        <p><strong>款式：</strong>落肩Oversized宽松版型，衣长65cm，胸围120cm</p>
+                        <p><strong>领型：</strong>自然圆领微微堆堆领，舒适不勒脖</p>
+                        <p><strong>袖型：</strong>落肩长袖，袖口微喇设计，增加慵懒感</p>
+                        <p><strong>下摆：</strong>轻微波浪边，无收紧，自然下垂</p>
+                        <p><strong>装饰：</strong>无纽扣，无刺绣，纯粹极简风格</p>
+                        <p><strong>工艺：</strong>12针粗针平针编织，紧密均匀</p>
+                    </div>
+                    <table class="specs-table">
+                        <tr><th>项目</th><th>规格</th></tr>
+                        <tr><td>面料成分</td><td>30%山羊绒 + 70%美利奴羊毛</td></tr>
+                        <tr><td>可选颜色</td><td><span class="color-tag">燕麦色</span><span class="color-tag">奶油白</span><span class="color-tag">炭灰色</span><span class="color-tag">浅驼色</span></td></tr>
+                        <tr><td>克重</td><td>380g（厚实保暖）</td></tr>
+                        <tr><td>包装</td><td>opp袋+吊牌+包装盒</td></tr>
+                        <tr><td>适用场景</td><td>日常通勤、休闲逛街、居家舒适</td></tr>
+                        <tr><td>目标客群</td><td>25-40岁都市女性，追求品质生活</td></tr>
+                    </table>
+                </div>
+                <div class="product-image">
+                    <img src="images/1_oatmeal_knit_sweater.png" alt="燕麦色羊绒宽松毛衣">
+                </div>
             </div>
         </div>
 
         <!-- 产品2 -->
-        <div class="product-section">
-            <div class="product-name">💎 产品2：粉色短款绞花开衫</div>
-            <div class="sketch">
-                <div class="sketch-title">📐 设计规格</div>
-                款式：短款箱型，衣长48cm（及腰）| 领型：V领深开口<br>
-                纹理：正面绞花菱形格+反面桂花针 | 纽扣：4颗米色树脂扣
+        <div class="product-card">
+            <div class="product-header">
+                <div class="product-number">2</div>
+                <div class="product-name">粉色短款绞花开衫（复古时尚）</div>
             </div>
-            <div class="specs">
-                <div class="specs-row"><span class="specs-label">面料</span><span class="specs-value">100%腈纶仿羊绒（不起球）</span></div>
-                <div class="specs-row"><span class="specs-label">颜色</span><span class="specs-value"><span class="color-tag">樱花粉</span><span class="color-tag">奶白色</span><span class="color-tag">baby蓝</span></span></div>
-                <div class="specs-row"><span class="specs-label">克重</span><span class="specs-value">280g</span></div>
+            <div class="product-content">
+                <div class="product-info">
+                    <div class="design-section">
+                        <div class="design-section-title">📐 设计规格明细</div>
+                        <p><strong>款式：</strong>短款箱型，衣长48cm（及腰），适合搭配高腰裤裙</p>
+                        <p><strong>领型：</strong>V领深开口，可内搭吊带或衬衫</p>
+                        <p><strong>袖型：</strong>常规袖，袖口1x1罗纹收紧</p>
+                        <p><strong>纹理：</strong>正面绞花菱形格+反面桂花针，立体感强</p>
+                        <p><strong>纽扣：</strong>4颗米色树脂扣，简约大方</p>
+                        <p><strong>特色：</strong>袖口和下摆1x1罗纹收边，防止变形</p>
+                    </div>
+                    <table class="specs-table">
+                        <tr><th>项目</th><th>规格</th></tr>
+                        <tr><td>面料成分</td><td>100%腈纶仿羊绒（不起球）</td></tr>
+                        <tr><td>可选颜色</td><td><span class="color-tag">樱花粉</span><span class="color-tag">奶白色</span><span class="color-tag">baby蓝</span></td></tr>
+                        <tr><td>克重</td><td>280g（中等厚度）</td></tr>
+                        <tr><td>包装</td><td>opp袋+简单吊牌</td></tr>
+                        <tr><td>适用场景</td><td>春季外出、约会穿搭、办公室内搭</td></tr>
+                        <tr><td>目标客群</td><td>20-35岁年轻女性，喜爱甜美风格</td></tr>
+                    </table>
+                </div>
+                <div class="product-image">
+                    <img src="images/2_pink_cable_cardigan.png" alt="粉色短款绞花开衫">
+                </div>
             </div>
         </div>
 
         <!-- 产品3 -->
-        <div class="product-section">
-            <div class="product-name">💎 产品3：高领羊毛针织套裝</div>
-            <div class="sketch">
-                <div class="sketch-title">📐 设计规格</div>
-                上衣：高领半拉链，袖口收紧 | 裤子：阔腿裤，腰部松紧带+抽绳<br>
-                套装效果：上下同色，整体协调
+        <div class="product-card">
+            <div class="product-header">
+                <div class="product-number">3</div>
+                <div class="product-name">高领羊毛针织套裝（懒人必备）</div>
             </div>
-            <div class="specs">
-                <div class="specs-row"><span class="specs-label">面料</span><span class="specs-value">50%羊毛+50%腈纶混纺</span></div>
-                <div class="specs-row"><span class="specs-label">颜色</span><span class="specs-value"><span class="color-tag">驼色</span><span class="color-tag">黑色</span><span class="color-tag">燕麦色</span></span></div>
+            <div class="product-content">
+                <div class="product-info">
+                    <div class="design-section">
+                        <div class="design-section-title">📐 设计规格明细</div>
+                        <p><strong>上衣：</strong>半高领设计，袖口收紧，下摆可扎进裤子</p>
+                        <p><strong>裤子：</strong>阔腿裤版型，腰部松紧带+抽绳，可调节腰围</p>
+                        <p><strong>套装效果：</strong>上下同色，整体协调，一秒出门</p>
+                        <p><strong>设计亮点：</strong>上下装可分开搭配，一衣多穿</p>
+                        <p><strong>版型：</strong>宽松舒适，不挑身材</p>
+                    </div>
+                    <table class="specs-table">
+                        <tr><th>项目</th><th>规格</th></tr>
+                        <tr><td>面料成分</td><td>50%羊毛+50%腈纶混纺</td></tr>
+                        <tr><td>可选颜色</td><td><span class="color-tag">驼色</span><span class="color-tag">黑色</span><span class="color-tag">燕麦色</span></td></tr>
+                        <tr><td>克重</td><td>上衣350g+裤子400g</td></tr>
+                        <tr><td>包装</td><td>套装包装盒</td></tr>
+                        <tr><td>适用场景</td><td>通勤日常、家居休闲、瑜伽健身</td></tr>
+                        <tr><td>目标客群</td><td>25-45岁追求效率的都市女性</td></tr>
+                    </table>
+                </div>
+                <div class="product-image">
+                    <img src="images/3_wool_suit_set.png" alt="高领羊毛针织套裝">
+                </div>
             </div>
         </div>
 
-        <!-- 产品4-10 简化版 -->
-        <div class="product-section">
-            <div class="product-name">💎 产品4：罗纹紧身针织连衣裙</div>
-            <p>Bodycon紧身款 | 全身竖条罗纹（显瘦） | 面料：90%人棉+10%氨纶 | 颜色：黑/酒红/深蓝/焦糖</p>
-        </div>
-        <div class="product-section">
-            <div class="product-name">💎 产品5：设计师袖针织上衣</div>
-            <p>灯笼袖/泡泡袖设计 | 拍照效果好 | 面料：100%精梳棉 | 颜色：薄荷绿/薰衣草紫/奶油黄</p>
-        </div>
-        <div class="product-section">
-            <div class="product-name">💎 产品6：镂空钩针罩衫</div>
-            <p>宽松蝙蝠袖，镂空钩花工艺 | 度假风格 | 面料：100%棉 | 颜色：白/米色</p>
-        </div>
-        <div class="product-section">
-            <div class="product-name">💎 产品7：驼色羊绒大衣式开衫</div>
-            <p>长款过膝，系带收腰 | 面料：10%羊绒+90%羊毛 | 颜色：驼色/炭灰</p>
-        </div>
-        <div class="product-section">
-            <div class="product-name">💎 产品8：假两件高领马甲</div>
-            <p>外层马甲+内层高领，假两件效果 | 面料：羊毛混纺 | 颜色：灰/黑/驼</p>
-        </div>
-        <div class="product-section">
-            <div class="product-name">💎 产品9：渐变扎染针织套头衫</div>
-            <p>渐变扎染工艺，差异化竞争 | 面料：腈纶仿羊绒 | 颜色：紫→深紫渐变</p>
-        </div>
-        <div class="product-section">
-            <div class="product-name">💎 产品10：GRS环保面料休闲套裝</div>
-            <p>环保可持续+功能舒适 | 面料：GRS再生涤纶 | 颜色：深绿/海军蓝</p>
+        <!-- 产品4 -->
+        <div class="product-card">
+            <div class="product-header">
+                <div class="product-number">4</div>
+                <div class="product-name">罗纹紧身针织连衣裙（显瘦神器）</div>
+            </div>
+            <div class="product-content">
+                <div class="product-info">
+                    <div class="design-section">
+                        <div class="design-section-title">📐 设计规格明细</div>
+                        <p><strong>款式：</strong>Bodycon紧身包臀款，勾勒身材曲线</p>
+                        <p><strong>领型：</strong>经典圆领，修饰锁骨</p>
+                        <p><strong>袖型：</strong>无袖/短袖可选，满足不同需求</p>
+                        <p><strong>纹理：</strong>全身竖条罗纹，视觉显瘦10斤</p>
+                        <p><strong>下摆：</strong>微开叉设计，增加灵动性</p>
+                        <p><strong>长度：</strong>及膝/过膝可选</p>
+                    </div>
+                    <table class="specs-table">
+                        <tr><th>项目</th><th>规格</th></tr>
+                        <tr><td>面料成分</td><td>90%人棉+10%氨纶（高弹力）</td></tr>
+                        <tr><td>可选颜色</td><td><span class="color-tag">黑色</span><span class="color-tag">酒红色</span><span class="color-tag">深蓝色</span><span class="color-tag">焦糖色</span></td></tr>
+                        <tr><td>克重</td><td>220g（轻薄贴合）</td></tr>
+                        <tr><td>弹性</td><td>四向弹力，上身无束缚感</td></tr>
+                        <tr><td>适用场景</td><td>约会聚餐、职场穿搭、派对活动</td></tr>
+                        <tr><td>目标客群</td><td>20-35岁曲线感女性</td></tr>
+                    </table>
+                </div>
+                <div class="product-image">
+                    <img src="images/4_ribbed_dress.png" alt="罗纹紧身针织连衣裙">
+                </div>
+            </div>
         </div>
 
-        <h2>三、AI生成模特展示图</h2>
-        <p style="color:#666;">使用阿里百炼 Qwen-Image-Max 生成 | 点击图片可查看大图</p>
-        
-        <div class="image-grid">
-            <div class="image-item"><img src="https://dashscope-result-sh.oss-cn-shanghai.aliyuncs.com/7d/a5/20260301/d23adf3d/11b1a7e9-996d-49f2-a1a3-ecdc94d4b3b53812677657.png?Expires=1772980344" alt="1"><p>1. 燕麦色羊绒宽松毛衣</p></div>
-            <div class="image-item"><img src="https://dashscope-result-sh.oss-cn-shanghai.aliyuncs.com/7d/e3/20260301/d23adf3d/a0916a11-0452-4489-a104-3c330c4f6d3a163348207.png?Expires=1772980369" alt="2"><p>2. 粉色短款绞花开衫</p></div>
-            <div class="image-item"><img src="https://dashscope-result-sh.oss-cn-shanghai.aliyuncs.com/7d/9d/20260301/d23adf3d/8be298db-7aad-4918-863a-fb1c8ff6d44f3197077325.png?Expires=1772980391" alt="3"><p>3. 高领羊毛针织套裝</p></div>
-            <div class="image-item"><img src="https://dashscope-result-sh.oss-cn-shanghai.aliyuncs.com/7d/27/20260301/d23adf3d/695e365a-15bc-48b7-ba80-90f9ef6d28e9435667317.png?Expires=1772980412" alt="4"><p>4. 罗纹紧身针织连衣裙</p></div>
-            <div class="image-item"><img src="https://dashscope-result-sh.oss-cn-shanghai.aliyuncs.com/7d/f0/20260301/d23adf3d/5097bd1d-36b5-4385-84b2-27deb12a8bf92824763450.png?Expires=1772980536" alt="5"><p>5. 设计师袖针织上衣</p></div>
-            <div class="image-item"><img src="https://dashscope-result-sh.oss-cn-shanghai.aliyuncs.com/7d/c9/20260301/d23adf3d/63c56067-11d3-4df8-91c4-2af29dcaadd04178083453.png?Expires=1772980560" alt="6"><p>6. 镂空钩针罩衫</p></div>
-            <div class="image-item"><img src="https://dashscope-result-sh.oss-cn-shanghai.aliyuncs.com/7d/00/20260301/d23adf3d/9186439b-f1ea-48c7-8db1-2b8367b09c342867443382.png?Expires=1772980586" alt="7"><p>7. 驼色羊绒大衣式开衫</p></div>
-            <div class="image-item"><img src="https://dashscope-result-sh.oss-cn-shanghai.aliyuncs.com/7d/8c/20260301/d23adf3d/bc4b8e2f-44ce-4d6d-b3b7-720e8e0b0df61207601729.png?Expires=1772980440" alt="8"><p>8. 假两件针织上衣</p></div>
-            <div class="image-item"><img src="https://dashscope-result-sh.oss-cn-shanghai.aliyuncs.com/7d/20/20260301/d23adf3d/57703db7-1d8c-469d-8941-4fea2fd8cec12209414897.png?Expires=1772980461" alt="9"><p>9. 渐变色针织套头衫</p></div>
-            <div class="image-item"><img src="https://dashscope-result-sh.oss-cn-shanghai.aliyuncs.com/7d/4c/20260301/d23adf3d/6c5f674b-9966-41d7-bb2f-e07b38dc92671745531275.png?Expires=1772980653" alt="10"><p>10. 环保再生面料套裝</p></div>
+        <!-- 产品5 -->
+        <div class="product-card">
+            <div class="product-header">
+                <div class="product-number">5</div>
+                <div class="product-name">设计师袖针织上衣（拍照爆款）</div>
+            </div>
+            <div class="product-content">
+                <div class="product-info">
+                    <div class="design-section">
+                        <div class="design-section-title">📐 设计规格明细</div>
+                        <p><strong>款式：</strong>常规正肩基础款，适配各种身材</p>
+                        <p><strong>袖型：</strong>三选一（灯笼袖/泡泡袖/荷叶边袖）</p>
+                        <p><strong>特色：</strong>袖口宽松鼓起，拍照效果绝绝子</p>
+                        <p><strong>领型：</strong>圆领常规，简约百搭</p>
+                        <p><strong>建议：</strong>薄款面料，春秋季单穿最佳</p>
+                    </div>
+                    <table class="specs-table">
+                        <tr><th>项目</th><th>规格</th></tr>
+                        <tr><td>面料成分</td><td>100%精梳棉 或 棉麻混纺</td></tr>
+                        <tr><td>可选颜色</td><td><span class="color-tag">薄荷绿</span><span class="color-tag">薰衣草紫</span><span class="color-tag">奶油黄</span></td></tr>
+                        <tr><td>克重</td><td>180g（轻薄透气）</td></tr>
+                        <tr><td>包装</td><td>opp袋+时尚吊牌</td></tr>
+                        <tr><td>适用场景</td><td>闺蜜约会、拍照打卡、下午茶</td></tr>
+                        <tr><td>目标客群</td><td>18-30岁追求时尚的女性</td></tr>
+                    </table>
+                </div>
+                <div class="product-image">
+                    <img src="images/5_bell_sleeve_top.png" alt="设计师袖针织上衣">
+                </div>
+            </div>
         </div>
-        <p style="color:#999;font-size:12px;text-align:center;">⚠️ 图片链接有效期24小时，请及时保存</p>
 
-        <h2>四、中国Sourcing工厂推荐</h2>
+        <!-- 产品6 -->
+        <div class="product-card">
+            <div class="product-header">
+                <div class="product-number">6</div>
+                <div class="product-name">镂空钩针罩衫（度假风）</div>
+            </div>
+            <div class="product-content">
+                <div class="product-info">
+                    <div class="design-section">
+                        <div class="design-section-title">📐 设计规格明细</div>
+                        <p><strong>款式：</strong>宽松蝙蝠袖设计，遮肉显瘦</p>
+                        <p><strong>工艺：</strong>手工感镂空钩花，精致细腻</p>
+                        <p><strong>特色：</strong>透视效果，若隐若现</p>
+                        <p><strong>内搭：</strong>建议内搭吊带或比基尼</p>
+                        <p><strong>场景：</strong>海边度假、户外音乐节</p>
+                    </div>
+                    <table class="specs-table">
+                        <tr><th>项目</th><th>规格</th></tr>
+                        <tr><td>面料成分</td><td>100%纯棉</td></tr>
+                        <tr><td>可选颜色</td><td><span class="color-tag">纯白色</span><span class="color-tag">米白色</span></td></tr>
+                        <tr><td>克重</td><td>150g（轻薄透气）</td></tr>
+                        <tr><td>包装</td><td>opp袋+说明书</td></tr>
+                        <tr><td>适用场景</td><td>海边度假、户外音乐节、田园风拍摄</td></tr>
+                        <tr><td>目标客群</td><td>18-35岁追求浪漫风格的女性</td></tr>
+                    </table>
+                </div>
+                <div class="product-image">
+                    <img src="images/6_crochet_coverup.png" alt="镂空钩针罩衫">
+                </div>
+            </div>
+        </div>
+
+        <!-- 产品7 -->
+        <div class="product-card">
+            <div class="product-header">
+                <div class="product-number">7</div>
+                <div class="product-name">驼色羊绒大衣式开衫（外套爆款）</div>
+            </div>
+            <div class="product-content">
+                <div class="product-info">
+                    <div class="design-section">
+                        <div class="design-section-title">📐 设计规格明细</div>
+                        <p><strong>款式：</strong>长款过膝，羊绒大衣廓形</p>
+                        <p><strong>腰部：</strong>系带收腰，可自行调节松紧</p>
+                        <p><strong>版型：</strong>一件外套两种穿法（外套/开衫）</p>
+                        <p><strong>口袋：</strong>两侧斜插袋，实用美观</p>
+                        <p><strong>厚度：</strong>厚实保暖，可替代轻外套</p>
+                    </div>
+                    <table class="specs-table">
+                        <tr><th>项目</th><th>规格</th></tr>
+                        <tr><td>面料成分</td><td>10%羊绒+90%羊毛</td></tr>
+                        <tr><td>可选颜色</td><td><span class="color-tag">经典驼色</span><span class="color-tag">炭灰色</span><span class="color-tag">黑色</span></td></tr>
+                        <tr><td>克重</td><td>650g（厚实保暖）</td></tr>
+                        <tr><td>包装</td><td>高级包装盒+防尘袋</td></tr>
+                        <tr><td>适用场景</td><td>秋冬通勤、商务场合、日常出行</td></tr>
+                        <tr><td>目标客群</td><td>25-45岁成熟女性，追求品质</td></tr>
+                    </table>
+                </div>
+                <div class="product-image">
+                    <img src="images/7_camel_coat_cardigan.png" alt="驼色羊绒大衣式开衫">
+                </div>
+            </div>
+        </div>
+
+        <!-- 产品8 -->
+        <div class="product-card">
+            <div class="product-header">
+                <div class="product-number">8</div>
+                <div class="product-name">假两件高领马甲（层次款）</div>
+            </div>
+            <div class="product-content">
+                <div class="product-info">
+                    <div class="design-section">
+                        <div class="design-section-title">📐 设计规格明细</div>
+                        <p><strong>设计：</strong>外层马甲+内层高领，假两件效果</p>
+                        <p><strong>亮点：</strong>无需搭配，自带层次感</p>
+                        <p><strong>实用性：</strong>一件顶两件，省时省力</p>
+                        <p><strong>领型：</name>半高领设计，保暖不勒脖</p>
+                        <p><strong>下摆：</name>直角设计，利落有型</p>
+                    </div>
+                    <table class="specs-table">
+                        <tr><th>项目</th><th>规格</th></tr>
+                        <tr><td>面料成分</td><td>羊毛混纺（30%羊毛）</td></tr>
+                        <tr><td>可选颜色</td><td><span class="color-tag">高级灰</span><span class="color-tag">经典黑</span><span class="color-tag">驼色</span></td></tr>
+                        <tr><td>克重</td><td>280g（中等厚度）</td></tr>
+                        <tr><td>包装</td><td>opp袋+吊牌</td></tr>
+                        <tr><td>适用场景</td><td>日常通勤、层次叠穿、职场穿搭</td></tr>
+                        <tr><td>目标客群</td><td>22-38岁追求效率的都市女性</td></tr>
+                    </table>
+                </div>
+                <div class="product-image">
+                    <img src="images/8_fake_layered_vest.png" alt="假两件高领马甲">
+                </div>
+            </div>
+        </div>
+
+        <!-- 产品9 -->
+        <div class="product-card">
+            <div class="product-header">
+                <div class="product-number">9</div>
+                <div class="product-name">渐变扎染针织套头衫（差异化）</div>
+            </div>
+            <div class="product-content">
+                <div class="product-info">
+                    <div class="design-section">
+                        <div class="design-section-title">📐 设计规格明细</div>
+                        <p><strong>工艺：</strong>渐变扎染工艺，每件独一无二</p>
+                        <p><strong>色彩：</strong>从浅到深自然过渡</p>
+                        <p><strong>版型：</strong>常规宽松款，不挑身材</p>
+                        <p><strong>特色：</strong>差异化竞争利器，独家款式</p>
+                        <p><strong>时尚度：</strong>走在街上回头率超高</p>
+                    </div>
+                    <table class="specs-table">
+                        <tr><th>项目</th><th>规格</th></tr>
+                        <tr><td>面料成分</td><td>腈纶仿羊绒（不起球）</td></tr>
+                        <tr><td>可选颜色</td><td><span class="color-tag">紫→深紫渐变</span><span class="color-tag">蓝→深蓝渐变</span><span class="color-tag">粉→红渐变</span></td></tr>
+                        <tr><td>克重</td><td>250g（中等）</td></tr>
+                        <tr><td>包装</td><td>opp袋+特色吊牌</td></tr>
+                        <tr><td>适用场景</td><td>潮流穿搭、街头拍照、音乐节</td></tr>
+                        <tr><td>目标客群</td><td>18-28岁追求个性的年轻女性</td></tr>
+                    </table>
+                </div>
+                <div class="product-image">
+                    <img src="images/9_gradient_sweater.png" alt="渐变扎染针织套头衫">
+                </div>
+            </div>
+        </div>
+
+        <!-- 产品10 -->
+        <div class="product-card">
+            <div class="product-header">
+                <div class="product-number">10</div>
+                <div class="product-name">GRS环保再生面料套裝（可持续）</div>
+            </div>
+            <div class="product-content">
+                <div class="product-info">
+                    <div class="design-section">
+                        <div class="design-section-title">📐 设计规格明细</div>
+                        <p><strong>面料：</strong>GRS认证再生涤纶，环保可持续</p>
+                        <p><strong>风格：</strong>运动休闲风，舒适自在</p>
+                        <p><strong>套装：</strong>上下配套，宽松舒适</p>
+                        <p><strong>功能：</strong>吸湿排汗，透气舒适</p>
+                        <p><strong>卖点：</strong>欧美市场环保概念正热</p>
+                    </div>
+                    <table class="specs-table">
+                        <tr><th>项目</th><th>规格</th></tr>
+                        <tr><td>面料成分</td><td>GRS再生涤纶</td></tr>
+                        <tr><td>可选颜色</td><td><span class="color-tag">森林绿</span><span class="color-tag">海军蓝</span><span class="color-tag">岩石灰</span></td></tr>
+                        <tr><td>克重</td><td>280g（运动厚度）</td></tr>
+                        <tr><td>认证</td><td>GRS全球回收标准认证</td></tr>
+                        <tr><td>适用场景</td><td>瑜伽健身、居家运动、日常休闲</td></tr>
+                        <tr><td>目标客群</td><td>22-40岁环保意识强的消费者</td></tr>
+                    </table>
+                </div>
+                <div class="product-image">
+                    <img src="images/10_eco_sport_suit.png" alt="GRS环保再生面料套裝">
+                </div>
+            </div>
+        </div>
+
+        <h2>三、中国Sourcing工厂推荐</h2>
 
         <div class="factory-box">
             <div class="factory-name">🏭 工厂1：嘉兴濮院羊毛衫产业带（强烈推荐）</div>
-            <div class="contact-method">
-                <p><strong>搜索关键词：</strong></p>
-                <div class="search-params">濮院羊毛衫工厂直销 针织衫女 2026新款</div>
-                <p><strong>推荐店铺：</strong></p>
-                <ul>
-                    <li>「濮院镇鑫泰毛衫厂」- 专注基础款，价格最低</li>
-                    <li>「嘉兴市秀洲区羊毛衫厂」- 品质好，中高端</li>
-                    <li>「濮院依衫服饰」- 款式新，适合电商</li>
-                </ul>
-                <p><strong>联系方式：</strong>1688站内搜索公司名称，联系客服获取微信</p>
-            </div>
+            <p><strong>搜索关键词：</strong></p>
+            <div class="search-params">濮院羊毛衫工厂直销 针织衫女 2026新款</div>
+            <p><strong>推荐店铺：</strong></p>
+            <ul>
+                <li>「濮院镇鑫泰毛衫厂」- 专注基础款，价格最低</li>
+                <li>「嘉兴市秀洲区羊毛衫厂」- 品质好，中高端</li>
+                <li>「濮院依衫服饰」- 款式新，适合电商</li>
+            </ul>
+            <p><strong>联系方式：</strong>1688站内搜索公司名称，联系客服获取微信</p>
         </div>
 
         <div class="factory-box">
             <div class="factory-name">🏭 工厂2：广州中大面料市场（快反首选）</div>
-            <div class="contact-method">
-                <p><strong>地址：</strong>广州海珠区中大布匹市场</p>
-                <p><strong>搜索关键词：</strong></p>
-                <div class="search-params">中大面料 针织面料 羊毛混纺 现货批发</div>
-                <p><strong>拿货方式：</strong>现场看版，自带版型让工厂打版</p>
-            </div>
+            <p><strong>地址：</strong>广州海珠区中大布匹市场</p>
+            <p><strong>搜索关键词：</strong></p>
+            <div class="search-params">中大面料 针织面料 羊毛混纺 现货批发</div>
+            <p><strong>拿货方式：</strong>现场看版，自带版型让工厂打版</p>
         </div>
 
         <div class="factory-box">
             <div class="factory-name">🏭 工厂3：1688源头工厂（最便捷）</div>
-            <div class="contact-method">
-                <p><strong>搜索关键词：</strong></p>
-                <div class="search-params">女装针织衫 源头工厂 一件代发 诚招代理</div>
-                <p><strong>筛选技巧：</strong></p>
-                <ul>
-                    <li>⭐ 等级：≥5年老店</li>
-                    <li>📦 销量：月销≥1000件</li>
-                    <li>✅ 复购率：≥20%</li>
-                </ul>
-            </div>
+            <p><strong>搜索关键词：</strong></p>
+            <div class="search-params">女装针织衫 源头工厂 一件代发 诚招代理</div>
+            <p><strong>筛选技巧：</strong></p>
+            <ul>
+                <li>⭐ 等级：≥5年老店</li>
+                <li>📦 销量：月销≥1000件</li>
+                <li>✅ 复购率：≥20%</li>
+            </ul>
         </div>
 
-        <h2>五、成本与批发价格体系</h2>
+        <h2>四、成本与批发价格体系</h2>
 
         <table class="price-table">
-            <tr>
-                <th>序号</th>
-                <th>产品名称</th>
-                <th>面料</th>
-                <th>拿货价<br>(50件)</th>
-                <th>拿货价<br>(200件)</th>
-                <th>建议<br>批发价</th>
-                <th>建议<br>零售价</th>
-                <th>利润率</th>
-            </tr>
+            <tr><th>序号</th><th>产品名称</th><th>面料</th><th>拿货价(50件)</th><th>拿货价(200件)</th><th>建议批发价</th><th>建议零售价</th><th>利润率</th></tr>
             <tr><td>1</td><td>燕麦色羊绒宽松毛衣</td><td>30%羊绒</td><td>¥198</td><td>¥168</td><td>$45-55</td><td>$89-120</td><td>150%+</td></tr>
             <tr><td>2</td><td>粉色短款绞花开衫</td><td>仿羊绒</td><td>¥85</td><td>¥68</td><td>$22-28</td><td>$45-59</td><td>120%+</td></tr>
             <tr><td>3</td><td>高领羊毛针织套裝</td><td>50%羊毛</td><td>¥185</td><td>¥155</td><td>$42-52</td><td>$79-99</td><td>130%+</td></tr>
@@ -250,7 +550,7 @@
             <tr><td>10</td><td>环保再生面料套裝</td><td>再生涤纶</td><td>¥98</td><td>¥82</td><td>$28-38</td><td>$55-75</td><td>140%+</td></tr>
         </table>
 
-        <h2>六、定价策略与利润分析</h2>
+        <h2>五、定价策略与利润分析</h2>
         
         <div class="tip">
             <h3>💰 定价策略建议</h3>
@@ -272,7 +572,7 @@
             </ul>
         </div>
 
-        <h2>七、操作建议与下一步</h2>
+        <h2>六、操作建议与下一步</h2>
         
         <div class="summary-box">
             <h3>🚀 起步建议</h3>
@@ -290,7 +590,8 @@
     <div style="text-align: center; margin-top: 30px; padding: 20px; color: #666;">
         <p><strong>报告生成时间：</strong>2026年3月1日</p>
         <p>使用工具：阿里百炼 Qwen-Image-Max AI图像生成</p>
-        <p>本报告仅供参考，不构成投资建议</p>
+        <p>GitHub仓库：<a href="https://github.com/davidlizhiwei/knitwear-report-2026">davidlizhiwei/knitwear-report-2026</a></p>
+        <p class="note">本报告仅供参考，不构成投资建议</p>
     </div>
 </body>
 </html>
